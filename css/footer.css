@@ -1,0 +1,390 @@
+/* ? COLOR PALETTE */
+:root {
+    --primary: #141414;
+    --dark_primary: #241827;
+    --secundary: #DB6694;
+    --dark_secundary: #97256B;
+    --ligth_pink: #FF7786;
+    --orange: #FE6601;
+    --dark_orange: #E83001;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #272729;
+}
+
+/* ? FONTS */
+:root {
+    --primaryFont: 'Poppins', sans-serif;
+    --secundaryFont: 'MuseoModerno', cursive;
+    --title: 'Permanent Marker', cursive;
+}
+
+/* ? GLOBALS */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--primaryFont);
+    background-color: var(--gray) !important;
+    color: var(--white);
+}
+
+.container {
+    width: 95%;
+    max-width: 120rem;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-family: var(--secundaryFont);
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+h2 ,
+h3 {
+    font-family: var(--secundaryFont);
+    color: var(--white);
+}
+
+h1 {
+    font-size: 7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 75%;
+    border-radius: 100%;
+}
+
+i {
+    color: var(--white);
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+.noMargin {
+    margin-left: 0 !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+/* ! FINISH GLOBALS---------------------------------- */
+
+/* ? FOOTER */
+.footer {
+    min-height: 17rem;
+    background: var(--primary);
+}
+
+.downFooter {
+    height: 10px;
+    background-color: #E83001;
+    border: none;
+}
+
+.small {
+    height: 3px;
+}
+
+.container__footer {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+/* ? MEDIA QUERY XS UNTIL LG*/
+@media (min-width: 10px) and (max-width: 1025px) { 
+    .container__footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    img {
+        width: 80%;
+        height: 70%;
+    }
+}
+
+.container__footer-myPerson {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 90%;
+}
+
+.myPerson__title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.myPerson__title h2 {
+    font-family: var(--title);
+    width: 100%;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.foo {
+    color: var(--white) !important;
+}
+
+.myPerson__description p {
+    text-align: justify;
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+.myPerson__description span {
+    font-weight: bold;
+    color: var(--dark_orange);
+}
+
+.myPerson__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.myPerson__description {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+
+/* ? MEDIA QUERY XS UNTIL LG*/
+@media (min-width: 10px) and (max-width: 1025px) { 
+
+    .container__footer-myPerson {
+        height: 70%;
+    }
+
+    .myPerson__title h2 {
+        font-size: 2.5rem;
+    }
+
+    .myPerson__image {
+        height: 100% !important;
+    }
+
+    .myPerson__title {
+        height: 100% !important;
+    }
+}
+
+.container__footer-mySocialNet {
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mySocialNet-contactMe {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.mySocialNet-contactMe p {
+    font-family: var(--title);
+    font-size: 3.8rem;
+    font-weight: 1000 !important;
+    color: var(--white);
+    writing-mode: vertical-rl; 
+    text-orientation: upright;
+    margin-left: 60%;
+}
+
+/* ? MEDIA QUERY XS UNTIL LG*/
+@media (min-width: 10px) and (max-width: 1025px) { 
+    .container__footer {
+        width: 100% !important;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .myPerson__description p {
+        font-size: 1.4rem;
+    }
+
+    .mySocialNet-contactMe p {
+        writing-mode: horizontal-tb; 
+    }
+
+    .container__footer-mySocialNet {
+        flex-direction: column;
+    }
+
+    .mySocialNet-contactMe {
+        width: 90%;
+    }
+
+    .mySocialNet-contactMe p {
+        margin: 0;
+    }
+
+    .mySocialNet-netsIcon {
+        margin-right: 0 !important;
+    }
+
+    .mySocialNet-nets {
+        width: 90% !important;
+        flex-direction: row !important;
+    }
+
+    .mySocialNet-netsIcon {
+        flex-direction: inherit !important;
+    }
+
+    .container__footer-myPerson {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .myPerson__description {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    hr {
+        width: 100% !important;
+    }
+
+    .mySocialNet-nets {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .container__rights-text {
+        width: 90%;
+    }
+
+    .mySocialNet-netsIcon {
+        margin: 0 auto !important;
+    }
+
+    .mySocialNet-contactMe {
+        margin: 0 auto !important;
+    }
+}
+
+.mySocialNet-nets {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mySocialNet-netsIcon {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 80%;
+    height: 80% !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__rights {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.container__rights-text {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.iconLink {
+    transition: all 300ms ease-in;
+}
+
+.iconLink:hover {
+    transform: scale(1.5, 1.5);
+}
+
+#rights {
+    font-weight: bold;
+}
+
+/* ? MEDIA QUERY XS (mobile devices)*/
+@media (min-width: 320px) and (max-width: 800px) { 
+    .container__rights-text {
+        width: 40%;
+    }
+}
+
+.container__rights-text p {
+    color: var(--white) !important;
+}
+
+.iconNet {
+    max-width: 4rem !important;
+    max-height: 4rem !important;
+    min-width: 4rem !important;
+    min-height: 4rem !important;
+    margin: 1.5rem;
+}
+
+/* ! FINISH FOOTER---------------------------------- */
